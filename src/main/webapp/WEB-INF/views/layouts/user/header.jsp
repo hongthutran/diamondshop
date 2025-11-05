@@ -8,7 +8,7 @@
 			<h1>
 				<a class="logo" href="index.html"><span>Twitter Bootstrap
 						ecommerce template</span> <img
-					src='<c:url value="assets/user/img/logo-bootstrap-shoping-cart.png"/>'
+					src='<c:url value="/assets/user/img/logo-bootstrap-shoping-cart.png"/>'
 					alt="bootstrap sexy shop"> </a>
 			</h1>
 		</div>

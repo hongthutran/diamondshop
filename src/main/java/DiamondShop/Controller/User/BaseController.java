@@ -1,4 +1,4 @@
-package DiamondShop.UserController;
+package DiamondShop.Controller.User;
 
 import javax.annotation.PostConstruct;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
-import DiamondShop.Service.HomeServiceImpl;
+import DiamondShop.Service.User.*;
 
 @Controller
 public class BaseController {

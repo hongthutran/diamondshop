@@ -1,4 +1,4 @@
-package DiamondShop.Service;
+package DiamondShop.Service.User;
 
 import java.util.List;
 
@@ -15,5 +15,7 @@ public interface IHomeService {
 	public List<Slide> getDataSlides();
 	public List<Category> getDataCategories();
 	public List<ProductDto> getDataProducts();
+	public List<ProductDto> getNewProducts();
+	public List<ProductDto> getHighlightProducts();
 }
 

@@ -1,13 +1,10 @@
-package DiamondShop.UserController;
+package DiamondShop.Controller.User;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import DiamondShop.Dao.SlideDao;
-import DiamondShop.Service.HomeServiceImpl;
 
 @Controller
 public class HomeController extends BaseController{
@@ -17,6 +14,8 @@ public class HomeController extends BaseController{
 		_mvShare.addObject("slides", _homeService.getDataSlides());
 		_mvShare.addObject("categories", _homeService.getDataCategories());
 		_mvShare.addObject("products", _homeService.getDataProducts());
+		_mvShare.addObject("newProducts", _homeService.getNewProducts());
+		_mvShare.addObject("highlightProducts", _homeService.getHighlightProducts());
 		_mvShare.setViewName("user/index");
 		return _mvShare;
 	}

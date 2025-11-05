@@ -1,4 +1,4 @@
-package DiamondShop.Service;
+package DiamondShop.Service.User;
 
 import java.util.List;
 
@@ -41,6 +41,16 @@ public class HomeServiceImpl implements IHomeService {
 	public List<ProductDto> getDataProducts() {
 		List<ProductDto> listProducts = productDao.getDataProducts();
 		return listProducts;
+	}
+	
+	public List<ProductDto> getNewProducts() {
+		List<ProductDto> listNewProducts = productDao.getNewProducts();
+		return listNewProducts;
+	}
+
+	public List<ProductDto> getHighlightProducts() {
+		List<ProductDto> listHighlightProducts = productDao.getHighlightProducts();
+		return listHighlightProducts;
 	}
 	
 }

@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <title>Trang chủ</title>
 <!-- 
@@ -12,7 +12,8 @@ Body Section
 			<ul class="nav nav-list">
 
 				<c:forEach var="item" items="${categories}">
-					<li><a href="${item.id}"><span class="icon-chevron-right"></span>${item.name}</a></li>
+					<li><a href="san-pham/${ item.id }">${ item.name }</a></li>
+							<li>
 				</c:forEach>
 
 				<li style="border: 0">&nbsp;</li>
@@ -124,10 +125,10 @@ New Products
 		<div class="row-fluid">
 			<div id="newProductCar" class="carousel slide">
 				<div class="carousel-inner">
-				<c:if test="${ products.size() > 0 }">
+				<c:if test="${ newProducts.size() > 0 }">
 					<div class="item active">
 						<ul class="thumbnails">
-						<c:forEach var="item" items="${ products }" varStatus="loop">
+						<c:forEach var="item" items="${ newProducts }" varStatus="loop">
 							<li class="span3">
 								<div class="thumbnail">
 									<a class="zoomTool" href="product_details.html"
@@ -139,10 +140,10 @@ New Products
 								</div>
 							</li>
 					
-							<c:if test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1) == products.size() }">
+							<c:if test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1) == newProducts.size() }">
 									</ul>
 								</div>
-								<c:if test="${ (loop.index + 1) < products.size() }">
+								<c:if test="${ (loop.index + 1) < newProducts.size() }">
 									<div class="item">
 										<ul class="thumbnails">	
 								</c:if>
@@ -167,10 +168,10 @@ New Products
 		</h3>
 		<hr class="soften" />
 		<div class="row-fluid">
-			<c:if test="${ products.size() > 0 }">
+			<c:if test="${ highlightProducts.size() > 0 }">
 				<ul class="thumbnails">
 				
-				<c:forEach var="item" items="${ products }" varStatus="loop">
+				<c:forEach var="item" items="${ highlightProducts }" varStatus="loop">
 					<li class="span4">
 						<div class="thumbnail">
 							<a class="zoomTool" href="product_details.html"
@@ -189,9 +190,9 @@ New Products
 						</div>
 					</li>
 					
-					<c:if test="${ (loop.index + 1) % 3 == 0 || (loop.index + 1) == products.size() }">
+					<c:if test="${ (loop.index + 1) % 3 == 0 || (loop.index + 1) == highlightProducts.size() }">
 						</ul>
-						<c:if test="${ (loop.index + 1) < products.size() }">
+						<c:if test="${ (loop.index + 1) < highlightProducts.size() }">
 							<ul class="thumbnails">
 						</c:if>
 					</c:if>
