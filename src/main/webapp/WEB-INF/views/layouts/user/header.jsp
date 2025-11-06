@@ -25,7 +25,7 @@
 				<br> <strong> Support (24/7) : 0800 1234 678 </strong><br>
 				<br>
 			</p>
-			<span class="btn btn-mini">[ 2 ] <span
+			<span class="btn btn-mini">[ ${ totalQuantyCart } ] <span
 				class="icon-shopping-cart"></span></span> <span
 				class="btn btn-warning btn-mini">$</span> <span class="btn btn-mini">&pound;</span>
 			<span class="btn btn-mini">&euro;</span>
@@ -44,15 +44,18 @@ Navigation Bar Section
 			</a>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<c:forEach var="item" items="${menus}" varStatus="index">
-					
-						<c:if test="${index.first}">
+					<c:forEach var="item" items="${ menus }" varStatus="index">
+
+						<c:if test="${ index.first }">
 							<li class="active">
 						</c:if>
-						<c:if test="${not index.first}">
+						<c:if test="${ not index.first }">
 							<li class="">
 						</c:if>
-						<a href="${item.name}">${item.name} </a></li>
+
+						<a href='<c:url value="/trang-chu"></c:url>'>${ item.name } </a>
+
+						</li>
 					</c:forEach>
 
 				</ul>

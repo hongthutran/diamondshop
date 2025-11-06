@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +47,8 @@
 						href="register.html"><span class="icon-edit"></span> Free
 						Register </a> <a href="contact.html"><span class="icon-envelope"></span>
 						Contact us</a> <a href="cart.html"><span
-						class="icon-shopping-cart"></span> 2 Item(s) - <span
-						class="badge badge-warning"> $448.42</span></a>
+						class="icon-shopping-cart"></span> ${ totalQuantyCart } Item(s) - <span
+						class="badge badge-warning"><fmt:formatNumber type="number" groupingUsed="true" value="${ totalPriceCart }" /> ₫</span></a>
 				</div>
 			</div>
 		</div>

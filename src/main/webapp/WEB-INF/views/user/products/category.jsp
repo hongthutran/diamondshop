@@ -59,8 +59,7 @@
 										groupingUsed="true" value="${ item.price }" /> ₫</strong>
 							</p>
 							<h4>
-								<a class="shopBtn" href="#" title="add to cart"> Add to
-									cart </a>
+								<a class="shopBtn" href="<c:url value="/AddCart/${ item.id_product }"/>" title="add to cart"> Thêm giỏ hàng </a>
 							</h4>
 							<div class="actionList">
 								<a class="pull-left" href="#">Add to Wish List </a> <a
