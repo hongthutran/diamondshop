@@ -16,8 +16,8 @@
 			</ul>
 			<div class="well well-small">
 				<h1>
-					Giỏ hàng <small class="pull-right"> 2 Sản phẩm trong giỏ
-						hàng </small>
+					Giỏ hàng <small class="pull-right"> ${ totalQuantyCart }
+						Sản phẩm trong giỏ hàng </small>
 				</h1>
 				<hr class="soften" />
 
@@ -41,18 +41,17 @@
 									src="<c:url value="/assets/user/img/${ item.value.product.img }"/>"
 									alt=""></td>
 								<td>${ item.value.product.title }</td>
-								<td><span class="shopBtn" style=background-color: yellow;"><span class="icon-ok"></span></span>
+								<td><span class="shopBtn" style="background-color: ${ item.value.product.code_color };"><span class="icon-ok"></span></span>
 								</td>
 								<td><fmt:formatNumber type="number" groupingUsed="true"
 										value="${ item.value.product.price }" /> ₫</td>
 								<td><input class="span1" style="max-width: 34px"
-									placeholder="1" id="appendedInputButtons" size="16"
-									type="number" min="0" max="1000">
+									placeholder="${ item.value.quanty }" id="quanty-cart-${ item.key }" size="16"
+									type="number" min="1" max="1000">
 									<div class="input-append">
-										<a href="<c:url value="/EditCart/1"/>"
-											class="btn btn-mini btn-danger" type="button"> <span
-											class="icon-edit"></span>
-										</a>
+										<button data-id="${ item.key }" class="btn btn-mini btn-danger edit-cart" type="button">
+											<span class="icon-edit"></span>
+										</button>
 									</div></td>
 								<td><a href="<c:url value="/DeleteCart/${ item.key }"/>"
 									class="btn btn-mini btn-danger" type="button"> <span
@@ -78,4 +77,15 @@
 			</div>
 		</div>
 	</div>
+	
+	<content tag="script">
+		<script>
+			$(".edit-cart").on("click", function() {
+				var id = $(this).data("id");
+				var quanty = $("#quanty-cart-" + id).val();
+				window.location = "EditCart/" + id + "/" + quanty;
+			});
+		</script>
+	</content>
+	
 </body>
