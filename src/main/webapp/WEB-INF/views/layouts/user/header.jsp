@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <header id="header">
 	<div class="row">
@@ -62,33 +63,20 @@ Navigation Bar Section
 					</c:forEach>
 
 				</ul>
-				<form action="#" class="navbar-search pull-left">
+				<form:form action="#" class="navbar-search pull-left">
 					<input type="text" placeholder="Search" class="search-query span2">
-				</form>
-				<ul class="nav pull-right">
-					<li class="dropdown"><a data-toggle="dropdown"
-						class="dropdown-toggle" href="#"><span class="icon-lock"></span>
-							Đăng nhập <b class="caret"></b></a>
-						<div class="dropdown-menu">
-							<form class="form-horizontal loginFrm">
-								<div class="control-group">
-									<input type="text" class="span2" id="inputEmail"
-										placeholder="Email">
-								</div>
-								<div class="control-group">
-									<input type="password" class="span2" id="inputPassword"
-										placeholder="Password">
-								</div>
-								<div class="control-group">
-									<label class="checkbox"> <input type="checkbox">
-										Remember me
-									</label>
-									<button type="submit" class="shopBtn btn-block">Sign
-										in</button>
-								</div>
-							</form>
-						</div></li>
-				</ul>
+				</form:form>
+				<div class="navbar-login">
+					<c:if test="${ empty LoginInfo }">
+					<a class="login-link" href="<c:url value="/dang-nhap"></c:url>"><span class="icon-lock"></span>
+							Đăng nhập </a>
+				</c:if>
+				
+				<c:if test="${ not empty LoginInfo }">
+					<a class="login-link">${ LoginInfo.display_name }</a>
+				</c:if>
+				</div>
+					
 			</div>
 		</div>
 	</div>

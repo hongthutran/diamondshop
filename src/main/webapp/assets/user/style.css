@@ -108,3 +108,11 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .gotop:hover {color: #fff;text-decoration: none;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
 #gototop{margin-top:1px;}
 #footerMenu a{ font-size:12px; text-transform:lowercase}
+
+.register-container, .login-container{padding-left: 25%}
+.register-form .error-message, login-form .error-message{color: red;}
+.w-100{width: 100%}
+.pr-10{padding-right: 10px}
+.message{color:green; margin-top: 10px}
+.navbar-login{display: flex;justify-content: flex-end;align-items: center;line-height: 40px;margin-right: 10px}
+.login-link, .login-link:hover{text-decoration: none;color: black;}

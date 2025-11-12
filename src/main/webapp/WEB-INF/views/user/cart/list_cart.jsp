@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="span12">
 			<ul class="breadcrumb">
-				<li><a href="index.html">Trang chủ</a> <span class="divider">/</span></li>
+				<li><a href="<c:url value="/trang-chu"/>">Trang chủ</a> <span class="divider">/</span></li>
 				<li class="active">Giỏ hàng</li>
 			</ul>
 			<div class="well well-small">
@@ -68,7 +68,7 @@
 						</tr>
 					</tbody>
 				</table>
-				<br /> <a href="products.html" class="shopBtn btn-large"><span
+				<br /> <a href="<c:url value="/trang-chu"/>" class="shopBtn btn-large"><span
 					class="icon-arrow-left"></span> Tiếp tục mua sắm </a> <a
 					href="login.html" class="shopBtn btn-large pull-right">Thanh
 					toán <span class="icon-arrow-right"></span>

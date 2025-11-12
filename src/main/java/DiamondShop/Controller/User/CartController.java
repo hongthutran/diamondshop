@@ -39,7 +39,6 @@ public class CartController extends BaseController {
 		session.setAttribute("cart", cart);
 		session.setAttribute("totalQuantyCart", cartService.TotalQuanty(cart));
 		session.setAttribute("totalPriceCart", cartService.TotalPrice(cart));
-//		return "redirect:/chi-tiet-san-pham/" + id;
 		//Redirects the user back to the URL of the previous page
 		return "redirect:" + request.getHeader("Referer"); 
 	}
