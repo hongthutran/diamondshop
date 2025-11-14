@@ -20,7 +20,7 @@ public class CategoryController extends BaseController{
 	private PaginationServiceImpl paginateService;
 	
 	@RequestMapping(value = "/san-pham/{id}")
-	public ModelAndView Product(@PathVariable String id) {
+	public ModelAndView product(@PathVariable String id) {
 		_mvShare.setViewName("user/products/category");
 		
 		int totalData = categoryService.getAllProductsByID(Integer.parseInt(id)).size();
@@ -34,7 +34,7 @@ public class CategoryController extends BaseController{
 	}
 	
 	@RequestMapping(value = "/san-pham/{id}/{currentPage}")
-	public ModelAndView Product(@PathVariable String id, @PathVariable String currentPage) {
+	public ModelAndView product(@PathVariable String id, @PathVariable String currentPage) {
 		_mvShare.setViewName("user/products/category");
 		
 		int totalData = categoryService.getAllProductsByID(Integer.parseInt(id)).size();

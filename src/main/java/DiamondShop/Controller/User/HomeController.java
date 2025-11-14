@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController extends BaseController{
 	
 	@RequestMapping(path = {"/","/trang-chu"}, method = RequestMethod.GET)
-	public ModelAndView Index() {
+	public ModelAndView index() {
 		_mvShare.addObject("slides", _homeService.getDataSlides());
 		_mvShare.addObject("categories", _homeService.getDataCategories());
 		_mvShare.addObject("products", _homeService.getDataProducts());
@@ -25,7 +25,7 @@ public class HomeController extends BaseController{
 	
 	
 	@RequestMapping(path = "/product")
-	public ModelAndView Product() {
+	public ModelAndView product() {
 		ModelAndView mv = new ModelAndView("user/product");
 		return mv;
 	}

@@ -116,3 +116,7 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .message{color:green; margin-top: 10px}
 .navbar-login{display: flex;justify-content: flex-end;align-items: center;line-height: 40px;margin-right: 10px}
 .login-link, .login-link:hover{text-decoration: none;color: black;}
+.checkout-form .control-group .controls{margin-left: 0px}
+.checkout-form .control-label{text-align: left;}
+.checkout{margin-left: 25%}
+.submitBtn{display: flex; justify-content: center}

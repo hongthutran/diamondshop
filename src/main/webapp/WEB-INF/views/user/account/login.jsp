@@ -28,14 +28,14 @@ Body Section
 							<div class="control-group">
 								<label class="control-label" for="inputEmail">Email</label>
 								<div class="controls pr-10">
-									<form:input type="email" class="w-100" placeholder="Vui lòng nhập email" path="user"/>
+									<form:input type="email" class="w-100" placeholder="Vui lòng nhập email" path="user" required="require"/>
 									<form:errors path="user" class="error-message"/>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="inputPassword">Password</label>
 								<div class="controls pr-10">
-									<form:input type="password" class="w-100" placeholder="Vui lòng nhập mật khẩu" path="password"/>
+									<form:input type="password" class="w-100" placeholder="Vui lòng nhập mật khẩu" path="password" required="require"/>
 									<form:errors path="password" class="error-message"/>
 								</div>
 							</div>

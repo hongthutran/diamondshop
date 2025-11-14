@@ -15,7 +15,7 @@ public class BaseController {
 	ModelAndView _mvShare = new ModelAndView();
 	
 	@PostConstruct
-	public ModelAndView Init() {
+	public ModelAndView init() {
 		_mvShare.addObject("menus", _homeService.getDataMenus());
 		return _mvShare;
 	}

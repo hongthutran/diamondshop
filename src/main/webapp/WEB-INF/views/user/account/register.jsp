@@ -52,7 +52,7 @@ Body Section
 									<form:input type="text" class="w-100" placeholder="Vui lòng nhập địa chỉ" path="address" />
 								</div>
 							</div>
-							<div class="controls margin-auto">
+							<div class="controls margin-auto submitBtn">
 								<button type="submit" class="btn block">Đăng ký</button>
 							</div>
 							<p class="message">${ status }</p>

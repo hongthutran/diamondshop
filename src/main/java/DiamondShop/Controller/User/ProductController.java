@@ -16,7 +16,7 @@ public class ProductController extends BaseController {
 	private ProductServiceImpl _productService;
 	
 	@RequestMapping(value = {"/chi-tiet-san-pham/{id}"})
-	public ModelAndView Index(@PathVariable long id) {
+	public ModelAndView index(@PathVariable long id) {
 		_mvShare.setViewName("/user/products/product");
 		_mvShare.addObject("product", _productService.getProductByID(id));
 		
